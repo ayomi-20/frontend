@@ -1,0 +1,236 @@
+.black-navbar {
+  background-color: black;
+  font-family: 'EB Garamond', 'Palatino Linotype', serif;
+  font-weight:450;
+  width: 100%;
+  height: 85px;              /* adjust as needed */
+  display: flex;
+  align-items: center;        /* center triangle+rectangle vertically */
+  position: relative;         /* to position child absolutely if needed */
+  border-bottom: 8px solid #FF6900;  /* orange outline at bottom */
+}
+
+.navbar-logo {
+  height: 45px;        /* adjust height to fit navbar */
+  margin-left: 25px;   /* space from left edge */
+  margin-right: 20px;  /* space before triangle+nav */
+}
+
+.phone-icon {
+  position: absolute;
+  left: -45px;              /* distance from right edge */
+  padding-bottom: 10px;                /* distance from top edge */
+  font-size: 10px;
+  color: #FF6900;
+  border: 2px solid #FF6900;
+  border-radius: 50%;
+  padding: 4px;
+  background-color: black; /* optional for contrast */
+  z-index: 1;               /* ensure it’s above other elements */
+}
+
+.phone-wrapper {
+  position: absolute;
+  left: 465px; /* Adjust as needed */
+  top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and number */
+  z-index: 2;
+}
+
+.phone-number {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  left: 100px;
+}
+
+
+.custom-envelope-icon {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  padding-top: 6px; 
+}
+
+.email-wrapper {
+  position: absolute;
+  left: 600px;       /* adjust as needed */
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 3;
+}
+
+.email-text {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-top: 20px;
+}
+
+.email-text:hover {
+  color: #ff6900;
+}
+
+.register-but {
+  background-color: #FF6900;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  left: -40px;
+}
+
+.register-wrapper .register-but:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #FF6900 /* slightly darker orange on hover */
+}
+.register-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;   /* pushes it to the far right of flex container */
+  transform: translateX(-80px);
+  margin-bottom: 20px;
+}
+.dropdown-menu {
+  background-color: white;
+  border-radius: 8px;
+  padding: 4px 0;
+  border: 1px solid #FF6900;
+}
+
+.dropdown-item {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: black !important;
+  background-color: white !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #FF6900 !important;
+}
+
+.form-popup {
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 25px;
+  border: 2px solid #FF6900;
+  border-radius: 12px;
+  z-index: 1000;
+  width: 450px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.form-popup h3 {
+  margin-top: 0;
+  font-family: 'Playfair Display', serif;
+  color: #FF6900;
+}
+
+.form-popup form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-popup input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Playfair Display', serif;
+}
+
+.form-popup button {
+  background-color: #FF6900;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+}
+
+.form-popup button:hover {
+  background-color: black;
+  border: 2px solid #FF6900
+}
+.name-row {
+  display: flex;
+  gap: 12px; /* space between fields */
+}
+
+.name-field {
+  flex: 1; /* equal width */
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+.nav-shape-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 45px;      /* move whole nav shape down */
+  left: 241px;    /* move whole nav shape right */
+  width: 1800px;
+}
+
+.triangle-right {
+  width: 250px;
+  /* height: 0; */
+  border-bottom:  55px solid #FF6900;
+  border-left: 65px solid transparent;
+  display: inline-block;
+  vertical-align: bottom;
+  transform: translateX(-20px);
+}
+
+.orange-rectangle {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  background-color: #FF6900;
+  padding-top: 1px;
+  width:899px;
+  gap: 44px;
+  transform: translateX(-190px);  /* move links 10px left */
+}
+
+
+.custom-nav-link {
+  color: white !important;     /* override Bootstrap black */
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 18px;
+  white-space: nowrap;
+  padding-right: 25px;
+  transition: background-color 0.3s ease, color 0.1s ease;
+}
+
+.active-link {
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  padding: 2px 20px;
+  border-radius: 18px;
+}
