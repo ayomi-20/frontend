@@ -65,6 +65,7 @@ export default function ResetRequestForm({ show, onClose, onNext }) {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
+        {loading && <div className="spinner"></div>}
         <button type="submit" disabled={loading}>{loading ? 'Sending...' : 'Send Code'}</button>
         <button type="button" onClick={onClose}>Cancel</button>
       </form>

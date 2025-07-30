@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import axios from 'axios';
 import PopupMessage from './popup.jsx'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 export default function RegisterDropdown({ show, handleClose, openLoginForm }) {
   const [formData, setFormData] = useState({
@@ -16,6 +18,12 @@ export default function RegisterDropdown({ show, handleClose, openLoginForm }) {
 
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); // password visibility state
+
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prev) => !prev);
+    };
 
   if (!show) return null;
 
@@ -97,16 +105,17 @@ export default function RegisterDropdown({ show, handleClose, openLoginForm }) {
         </div>
 
         {/* Password & User Type */}
-        <div className="name-row">
-          <div className="name-field">
-            <label htmlFor="password">Password</label>
-            <input id="password" type="password" value={formData.password} onChange={handleChange} required />
+        <div className="name-field">
+        <label htmlFor="password">Password</label>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+          <input id="password" type={showPassword ? 'text' : 'password'} value={formData.password} onChange={handleChange} required style={{ flex: 1 }} />
+          <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} onClick={togglePasswordVisibility} />
           </div>
+        </div>
           <div className="name-field">
             <label htmlFor="user_type">User Type</label>
             <input id="user_type" type="text" value={formData.user_type} readOnly />
           </div>
-        </div>
 
         {/* Image Upload */}
         <div className="name-field">
@@ -114,6 +123,7 @@ export default function RegisterDropdown({ show, handleClose, openLoginForm }) {
           <input id="image" type="file" accept="image/*" onChange={handleChange} />
         </div>
 
+        {loading && <div className="spinner"></div>}
         <button type="submit" disabled={loading}>{loading ? 'Signing up...' : 'Signup'}</button>
         <button type="button" onClick={handleClose}>Close</button>
 

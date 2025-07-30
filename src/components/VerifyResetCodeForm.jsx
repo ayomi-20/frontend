@@ -72,6 +72,7 @@ export default function VerifyResetCodeForm({ show, onClose, contact: initialCon
           onChange={(e) => setCode(e.target.value)}
           required
         />
+        {loading && <div className="spinner"></div>}
         <button type="submit" disabled={loading}> {loading ? 'Verifying...' : 'Verify'} </button>
         <button type="button" onClick={onClose}>Cancel</button>
       </form>

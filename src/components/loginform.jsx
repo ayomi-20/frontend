@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import './Navbar.css'; 
 import PopupMessage from './popup'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 export default function LoginForm({ show, handleClose, onForgotPassword }) {
   const [contact, setContact] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false); // loading state
+  const [showPassword, setShowPassword] = useState(false);
+
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prev) => !prev);
+    };
 
   if (!show) return null;
 
@@ -55,15 +63,23 @@ export default function LoginForm({ show, handleClose, onForgotPassword }) {
           onChange={(e) => setContact(e.target.value)}
           required
         />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+        <div className="password-input-wrapper">
+          <input
+            type={showPassword ? 'text' : 'password'}
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <FontAwesomeIcon
+            icon={showPassword ? faEye : faEyeSlash}
+            onClick={togglePasswordVisibility}
+            className="password-toggle-icon"
+          />
+        </div>
 
         <div className="form-actions">
+          {loading && <div className="spinner"></div>}
           <button type="submit" disabled={loading}>{loading ? 'Logging in...' : 'Login'}</button>
           <span className="forgot-password" onClick={onForgotPassword}>
           Forgot password?
