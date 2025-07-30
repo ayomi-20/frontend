@@ -1,0 +1,39 @@
+.contact-form-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px 0;
+  align-items: flex-start;
+}
+
+.contact-details, .form-wrapper {
+  flex: 1;
+  min-width: 300px;
+}
+
+.reach-out-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.reach-out-form .form-group {
+  margin-bottom: 15px;
+}
+
+.reach-out-form input,
+.reach-out-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.reach-out-form button {
+  padding: 10px 20px;
+  background-color: orange;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
