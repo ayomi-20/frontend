@@ -98,7 +98,6 @@ const handleClosePasswordResetForm = () => {
           </Dropdown>
         </div>
       </div>
-
       <RegisterDropdown show={showRegister} handleClose={handleClose} openLoginForm={handleShowLogin}  // <-- pass this handler here
 />
       <LoginForm show={showLogin} handleClose={handleCloseLogin} onForgotPassword={handleShowResetForm} />
