@@ -1,0 +1,183 @@
+/* Apply font to the entire profile page */
+.profile-container {
+  font-family: 'EB Garamond', 'Palatino Linotype', serif;
+  padding: 20px;   
+  margin-left: 10px;
+  margin-top: 15px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+.user-container {
+  flex: 2;       /* makes profile info take more space relative to review-card */
+  max-width: 500px;  /* optional max width */
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.profile-image-section {
+  background-color: #FF6900; /* your orange */
+  border: 2px solid black;
+  width: 100%;               /* full width of profile container */
+  max-width: 450px;          /* match profile container width */
+  padding: 20px;             /* some padding around */
+  display: flex;
+  align-items: center;
+  gap: 20px;                 /* space between image and text */
+  border-radius: 10px 10px 0 0; /* optional rounded top corners */
+  color: white;              /* text color on orange bg */
+}
+
+.profile-image-wrapper {
+  position: relative;
+  width: 160px;         /* slightly bigger for padding */
+  height: 160px;
+  margin-bottom: 10px;
+  background-color: #fdfcfb;  /* vibrant background */
+  border-radius: 50%;         /* make it round */
+  padding: 5px;               /* space between background and image */
+  box-shadow: 0 0 10px rgba(255, 105, 0, 0.5); /* subtle glow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* padding: 50px 50px; */
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.image-upload-label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* background-color: #FF6900; */
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  border: 2px solid white;
+}
+
+/* Headings */
+.user-profile h2 {
+  font-family: 'EB Garamond', 'Palatino Linotype', serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: #fcfafa;
+  margin-bottom: 10px;
+}
+
+.user-container h3 {
+  font-family: 'EB Garamond', 'Palatino Linotype', serif;
+  margin-left: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #FF6900;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Text */
+.user-container p {
+  font-family: 'EB Garamond', 'Palatino Linotype', serif;
+  font-size: 20px;
+  margin: 6px 100px;
+  /* align-items: center; */
+  color: #444;
+}
+
+/* List styles */
+.user-container ul {
+  font-family: 'EB Garamond', 'Palatino Linotype', serif;
+  margin-left: 180px;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.user-container li {
+  font-family: 'EB Garamond', 'Palatino Linotype', serif;
+  font-size: 20px;
+  margin-left: 40px;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 16px;
+}
+
+.review-card {
+  padding: 20px;
+  background-color: #e2e1e1;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex: 1;
+  max-width: 500px;
+  margin-left: 120px;
+  margin-top: 15px;
+}
+
+.review-card h3 {
+  font-family: 'EB Garamond', 'Palatino Linotype', serif;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.review-card textarea {
+  font-family: 'EB Garamond', 'Palatino Linotype', serif;
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.review-card input[type="number"] {
+  margin-top: 10px;
+  padding: 8px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.review-card button {
+  font-family: 'EB Garamond', 'Palatino Linotype', serif;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: #fc6603;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.review-card button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  font-family: 'EB Garamond', 'Palatino Linotype', serif;
+  color: red;
+  margin-top: 8px;
+}
+.profile-layout {
+  display: flex;
+  align-items: flex-start; /* align top edges */
+  /* gap: 15px; */
+  margin: 15px;
+}
+
